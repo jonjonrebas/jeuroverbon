@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="jeurover.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu Rover 1.1</title>
+</head>
+<body>
+    <div id="gameContainer" style="position: relative; width: 800px; height: 600px;">
+        <img id="kidnapper" src="kidnapper.jpeg" style="position: absolute; width: 50px; height: 50px; top: -50px; left: 375px;" />
+        <img id="victim" src="victim.jpeg" style="position: absolute; width: 50px; height: 50px; top: 100px; left: 375px;" />
+        <div id="text1" style="position: absolute; font-size: 20px; display: none;">Je te tiens!</div>
+<div id="text2" style="position: absolute; font-size: 20px; display: none;">À l'aide!</div>
+
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div id="musicBar"> <!-- Barre de musique -->
+      <p id="currentMusic">Musique en cours : Titre</p>
+      <audio id="musicPlayer" controls>
+        <source src="gamesong.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>      
+      <button id="nextTrack">Suivant</button>
+      <button id="prevTrack">Précédent</button>
+    </div>
+    <div id="controls">
+      <button id="pauseButton">Pause</button>
+      <button id="normalMode">Mode Normal</button>
+      <button id="battleRoyalMode">Mode Battle Royal</button>
+    </div>
+    <div id="scoreBoard">
+      <h3>Meilleurs Scores</h3>
+      <ul id="scoreList"></ul>
+    </div>
+    <div id="feedbackSection">
+        <h3>Laissez vos commentaires</h3>
+        <form id="feedbackForm">
+          <textarea id="feedbackInput" placeholder="Partagez vos retours ici..."></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+        <div id="feedbackList"></div>
+    </div>      
+  </div>
+  <script src="jeurover.js"></script>
+</body>
+</html>
